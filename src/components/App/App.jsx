@@ -52,8 +52,21 @@ class App extends Component {
     });
   };
 
+  changeFilter = evt => {
+    this.setState({ filter: evt.currentTarget.value });
+  };
+
+  filterList = () => {
+    const { contacts, filter } = this.state;
+    const normalizedFilter = filter.toLocaleLowerCase();
+    const visibleContacts = contacts.filter(contast =>
+      contast.name.toLocaleLowerCase().includes(normalizedFilter)
+    );
+    return visibleContacts;
+  };
+
   render() {
-    const { contacts, name } = this.state;
+    const { contacts, name, filter } = this.state;
     return (
       <Container>
         <h1>Phonebook</h1>
@@ -88,7 +101,11 @@ class App extends Component {
         </form>
         <h2>Contacts</h2>
         {/* <Filter ... /> */}
-        <ContactList contacts={contacts} />
+        <label>
+          Find contacts by name
+          <input type="text" value={filter} onChange={this.changeFilter} />{' '}
+        </label>
+        <ContactList contacts={this.filterList()} />
 
         <GlobalStyle />
       </Container>

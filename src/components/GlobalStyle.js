@@ -19,4 +19,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+ul {
+  list-style: none;
+}
+button {
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;}
 `;

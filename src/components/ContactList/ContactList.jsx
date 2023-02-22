@@ -1,27 +1,26 @@
 import PropTypes from 'prop-types';
-import { HiOutlineUserCircle } from 'react-icons/hi';
 import { HiUser } from 'react-icons/hi';
+import { Item, List } from 'components/ContactList/ContactList.styled';
 
 const ContactList = ({ contacts }) => {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => (
-        <li key={id}>
+        <Item key={id}>
           <HiUser />
           {name}: {number}
-        </li>
+        </Item>
       ))}
     </ul>
   );
 };
 
 ContactList.propTypes = {
-  //   options: PropTypes.shape({
-  //     good: PropTypes.number.isRequired,
-  //     neutral: PropTypes.number.isRequired,
-  //     bad: PropTypes.number.isRequired,
-  //   }).isRequired,
-  //   onLeaveFeedback: PropTypes.func.isRequired,
+  contacts: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+  }),
 };
 
 export default ContactList;
