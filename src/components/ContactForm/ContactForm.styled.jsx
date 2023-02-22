@@ -1,12 +1,61 @@
 import styled from 'styled-components';
 
-export const Item = styled.li`
+export const Form = styled.form`
+  padding: 15px 10px;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 15px;
   font-family: 'Segoe UI';
   font-size: 18px;
+  border: 1px solid #1664e2;
+  border-radius: 8px;
+`;
 
-  &:not(:last-child) {
-    margin-bottom: 5px;
+export const FormLabel = styled.label`
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-family: 'Segoe UI';
+  font-size: 18px;
+`;
+export const Input = styled.input`
+  padding: 5px;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+
+  transition: border 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #1664e2;
+  }
+`;
+
+export const Button = styled.button`
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 5px;
+  width: 200px;
+  border: 1px solid #1664e2;
+  border-radius: 4px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: rgba(22, 100, 226, 0.24) 0px 3px 8px;
+    background-color: rgba(22, 144, 226, 0.737);
+    border-color: transparent;
+    color: #fff;
   }
 `;
