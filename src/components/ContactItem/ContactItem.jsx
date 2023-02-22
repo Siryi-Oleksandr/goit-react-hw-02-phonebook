@@ -3,9 +3,9 @@ import { HiUser } from 'react-icons/hi';
 
 import { Item } from 'components/ContactItem/ContactItem.styled';
 
-const ContactItem = ({ id, name, number }) => {
+const ContactItem = ({ name, number }) => {
   return (
-    <Item key={id}>
+    <Item>
       <HiUser />
       <span>
         {name}: {number}
@@ -15,7 +15,6 @@ const ContactItem = ({ id, name, number }) => {
 };
 
 ContactItem.propTypes = {
-  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
 };
