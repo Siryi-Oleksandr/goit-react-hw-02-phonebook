@@ -37,9 +37,6 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
   padding: 5px;
   width: 200px;
   border: 1px solid #1664e2;

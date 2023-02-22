@@ -34,6 +34,12 @@ class App extends Component {
     }));
   };
 
+  deleteContact = contactId => {
+    this.setState(({ contacts }) => ({
+      contacts: contacts.filter(contact => contact.id !== contactId),
+    }));
+  };
+
   changeFilter = evt => {
     this.setState({ filter: evt.currentTarget.value });
   };
