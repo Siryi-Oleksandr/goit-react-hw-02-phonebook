@@ -3,14 +3,16 @@ import { HiUser } from 'react-icons/hi';
 
 import { Item, Button } from 'components/ContactItem/ContactItem.styled';
 
-const ContactItem = ({ id, name, number }) => {
+const ContactItem = ({ id, name, number, onDeleteContact }) => {
   return (
     <Item>
       <HiUser />
       <span>
         {name}: {number}
       </span>
-      <Button type="button">Delete</Button>
+      <Button type="button" onClick={() => onDeleteContact(id)}>
+        Delete
+      </Button>
     </Item>
   );
 };
@@ -18,7 +20,8 @@ const ContactItem = ({ id, name, number }) => {
 ContactItem.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
-  // onDeleteContact: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactItem;

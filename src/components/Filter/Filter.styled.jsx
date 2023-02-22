@@ -5,8 +5,6 @@ export const FilterLabel = styled.label`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* justify-content: center;
-  align-items: center; */
 
   font-family: 'Segoe UI';
   font-size: 18px;

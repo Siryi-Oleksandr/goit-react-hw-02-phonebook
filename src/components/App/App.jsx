@@ -62,7 +62,10 @@ class App extends Component {
 
         <h2>Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter} />
-        <ContactList contacts={this.filterList()} />
+        <ContactList
+          contacts={this.filterList()}
+          onDeleteContact={this.deleteContact}
+        />
         <GlobalStyle />
       </Container>
     );
