@@ -17,10 +17,16 @@ class App extends Component {
     filter: '',
   };
 
-  addContact = (name, number) => {
+  addContact = (newName, number) => {
+    const isNotUnique = this.state.contacts.some(
+      ({ name }) => name === newName
+    );
+    if (isNotUnique) {
+      return alert(`${newName} is already in contacts.`);
+    }
     const newContact = {
       id: nanoid(),
-      name,
+      name: newName,
       number,
     };
     this.setState(({ contacts }) => ({
