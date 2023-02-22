@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
 import { GlobalStyle } from 'components/GlobalStyle';
 import { Container } from './App.styled';
-import { nanoid } from 'nanoid';
 import ContactForm from 'components/ContactForm';
 import ContactList from 'components/ContactList';
 import Filter from 'components/Filter';
@@ -18,9 +18,8 @@ class App extends Component {
   };
 
   addContact = (name, number) => {
-    const randomId = nanoid();
     const newContact = {
-      id: randomId,
+      id: nanoid(),
       name,
       number,
     };
@@ -51,9 +50,7 @@ class App extends Component {
 
         <h2>Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter} />
-
         <ContactList contacts={this.filterList()} />
-
         <GlobalStyle />
       </Container>
     );

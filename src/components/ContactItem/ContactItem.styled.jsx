@@ -10,7 +10,3 @@ export const Item = styled.li`
     margin-bottom: 5px;
   }
 `;
-
-// export const List = styled.ul`
-//   margin-top: 20px;
-// `;

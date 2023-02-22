@@ -1,15 +1,11 @@
+import ContactItem from 'components/ContactItem';
 import PropTypes from 'prop-types';
-import { HiUser } from 'react-icons/hi';
-import { Item, List } from 'components/ContactList/ContactList.styled';
 
 const ContactList = ({ contacts }) => {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => (
-        <Item key={id}>
-          <HiUser />
-          {name}: {number}
-        </Item>
+        <ContactItem key={id} name={name} number={number} />
       ))}
     </ul>
   );
