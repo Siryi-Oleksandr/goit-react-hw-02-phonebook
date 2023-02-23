@@ -8,7 +8,7 @@ import {
   CustomError,
 } from './ContactForm.styled';
 import { Formik, ErrorMessage } from 'formik';
-import { object, string, number } from 'yup';
+import { object, string } from 'yup';
 
 const initialValues = { name: '', number: '' };
 const nameRegExp = /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/;
