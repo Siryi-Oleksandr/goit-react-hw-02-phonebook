@@ -67,6 +67,6 @@ export const CustomError = styled.div`
   width: 150px;
   border: 1px solid red;
   border-radius: 4px;
-  color: #e70f0f;
+  color: #ba1515;
   font-size: 12px;
 `;
