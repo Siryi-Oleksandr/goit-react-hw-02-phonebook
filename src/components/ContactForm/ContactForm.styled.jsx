@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { Form, Field } from 'formik';
 
-export const Form = styled.form`
+export const FormStyled = styled(Form)`
   padding: 15px 10px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
   font-family: 'Segoe UI';
   font-size: 18px;
   border: 1px solid #1664e2;
@@ -12,6 +13,7 @@ export const Form = styled.form`
 `;
 
 export const FormLabel = styled.label`
+  position: relative;
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -20,7 +22,7 @@ export const FormLabel = styled.label`
   font-family: 'Segoe UI';
   font-size: 18px;
 `;
-export const Input = styled.input`
+export const Input = styled(Field)`
   padding: 5px;
   width: 250px;
   border: 2px solid #ccc;
@@ -55,4 +57,16 @@ export const Button = styled.button`
     border-color: transparent;
     color: #fff;
   }
+`;
+
+export const CustomError = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 3px;
+  width: 150px;
+  border: 1px solid red;
+  border-radius: 4px;
+  color: #e70f0f;
+  font-size: 12px;
 `;
