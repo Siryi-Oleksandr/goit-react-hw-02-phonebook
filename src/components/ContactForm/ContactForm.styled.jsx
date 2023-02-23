@@ -30,7 +30,7 @@ export const Input = styled(Field)`
   outline: none;
   font-size: 14px;
 
-  transition: border 250ms ease-in-out;
+  transition: border 250ms linear;
 
   &:hover,
   &:focus {
