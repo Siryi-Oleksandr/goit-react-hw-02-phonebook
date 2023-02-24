@@ -64,9 +64,9 @@ export const CustomError = styled.div`
   top: 100%;
   left: 0;
   padding: 3px;
-  width: 150px;
-  border: 1px solid #ba1515;
+  width: 160px;
+  border: 1px solid red;
   border-radius: 4px;
-  color: #ba1515;
+  color: red;
   font-size: 12px;
 `;
